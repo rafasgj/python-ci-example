@@ -1,0 +1,21 @@
+# virtual environments
+/venv/
+/fpi-venv/
+
+# temporary files
+*.swp
+
+# Python output
+__pycache__/
+*.pyc
+*.pyo
+
+# Coverage files
+.coverage
+
+# text editor files
+/.vscode/
+
+# OS specific files.
+.DS_Store
+
