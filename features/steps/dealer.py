@@ -2,7 +2,7 @@
 
 from behave import given, when, then  # pylint: disable=no-name-in-module
 
-from src.test import Dealer
+from cards import Dealer
 
 
 @given('a dealer')
