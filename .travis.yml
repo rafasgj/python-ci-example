@@ -31,6 +31,9 @@ install:
   - $PYTHON -m pip install -r requirements.txt
 
 script:
-  - $PYTHON -m pylint --exit-zero features src
-  - $PYTHON -m coverage run -m behave
+  - $PYTHON -m pylint --exit-zero features/steps/* tests/* *.py
+  - $PYTHON -m coverage erase
+  - $PYTHON -m coverage run -a -m behave
+  - $PYTHON -m coverage run -a -m pytest
+  - $PYTHON -m coverage report
 
