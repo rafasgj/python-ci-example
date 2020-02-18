@@ -3,8 +3,7 @@ MANIFEST
 
 # virtual environments
 /.tox/
-/venv/
-/fpi-venv/
+/.venv/
 
 # temporary files
 *.swp
