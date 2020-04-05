@@ -18,6 +18,7 @@ def valid_cards():
 
 
 def test_dealer(configured_dealer, valid_cards):
+    # pylint: disable=redefined-outer-name
     """Test the Dealer class."""
     hand = configured_dealer.hand
     assert [c for c in hand if c not in valid_cards] == []
