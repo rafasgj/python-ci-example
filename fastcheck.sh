@@ -32,8 +32,12 @@ then
 	TESTS=`find tests -name "*.py"`
 	ROOT=`find . -maxdepth 1 -name "*.py"`
 	$PYTHON -m pylint ${FEATURES} $TESTS $ROOT
+    PYLINT_EXIT_CODE=$?
 else
 	$PYTHON -m pylint $*
+    PYLINT_EXIT_CODE=$?
 fi
 
 [ "$PYTHON_ENV" == "no" ] && deactivate > /dev/null 2>&1
+
+exit ${PYLINT_EXIT_CODE}
